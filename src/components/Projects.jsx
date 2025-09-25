@@ -6,6 +6,25 @@ import { FaReact, FaCss3Alt } from "react-icons/fa";
 import { SiTailwindcss, SiFramer, SiJavascript, SiHtml5, SiCss3, SiPhp, SiMysql } from "react-icons/si";
 
 const projects = [
+
+  {
+    id: "Camp Ceylon",
+    title: "Camp Ceylon",
+    subtitle: "Automated Campsite Booking System for Sri Lanka",
+    desc: " Camp Ceylon is a web-based platform designed to revolutionize Sri Lanka’s eco-tourism sector by digitalizing campsite discovery, bookings, weather updates, and automated permit management.",
+    tools: [
+      { name: "HTML", icon: <SiHtml5 className="text-orange-500" /> },
+      { name: "Tailwind CSS", icon: <SiTailwindcss className="text-cyan-500" /> },
+      { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" /> },
+      { name: "PHP", icon: <SiPhp className="text-indigo-600" /> },
+      { name: "MySQL", icon: <SiMysql className="text-blue-500" /> },
+    ],
+    images: ["/project-images/camp.png"],
+    github: "https://github.com/ChenukaRaneth76/Camp-Ceylon-",
+    live: "https://supermart-demo.com",
+    category: "Full Stack"
+  },
+
   {
     id: "PETGO",
     title: "PETGO",
@@ -20,40 +39,6 @@ const projects = [
     github: "https://github.com/ChenukaRaneth76/Petshop",
     live: "https://petgo-demo.com",
     category: "Frontend"
-  },
-  {
-    id: "RanHiru Delight Cake",
-    title: "Ranhiru Delight Cake",
-    subtitle: "RanhiruDelight Cakes Platform",
-    desc: "Developed a responsive front-end using HTML, CSS, and JavaScript for an online cake order platform. Integrated PHP and MySQL for dynamic content management and order tracking.",
-    tools: [
-      { name: "HTML", icon: <SiHtml5 className="text-orange-500" /> },
-      { name: "CSS", icon: <SiCss3 className="text-blue-500" /> },
-      { name: "PHP", icon: <SiPhp className="text-indigo-600" /> },
-      { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" /> },
-      { name: "MySQL", icon: <SiMysql className="text-blue-500" /> },
-    ],
-    images: ["/project-images/ranhiru.png"],
-    github: "https://github.com/ChenukaRaneth76/RanhiruCake-Web-Application",
-    live: "https://ranhiru-cakes.com",
-    category: "Full Stack"
-  },
-  {
-    id: "SuperMart",
-    title: "SuperMart",
-    subtitle: "SuperMart Management System",
-    desc: "Designed and implemented a full-stack web application for a grocery store, utilizing HTML, CSS, JavaScript, MySQL, and PHP. Performed usability analysis and restructured the user interface using Figma.",
-    tools: [
-      { name: "HTML", icon: <SiHtml5 className="text-orange-500" /> },
-      { name: "CSS", icon: <SiCss3 className="text-blue-500" /> },
-      { name: "PHP", icon: <SiPhp className="text-indigo-600" /> },
-      { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" /> },
-      { name: "MySQL", icon: <SiMysql className="text-blue-500" /> },
-    ],
-    images: ["/project-images/dnk.png"],
-    github: "https://github.com/yourproject",
-    live: "https://github.com/ChenukaRaneth76/DNK-Super",
-    category: "Full Stack"
   },
 
   {
@@ -75,22 +60,41 @@ const projects = [
   },
 
   {
-    id: "Camp Ceylon",
-    title: "Camp Ceylon",
-    subtitle: "Automated Campsite Booking System for Sri Lanka",
-    desc: " Camp Ceylon is a web-based platform designed to revolutionize Sri Lanka’s eco-tourism sector by digitalizing campsite discovery, bookings, weather updates, and automated permit management.",
+    id: "SuperMart",
+    title: "SuperMart",
+    subtitle: "SuperMart Management System",
+    desc: "Designed and implemented a full-stack web application for a grocery store, utilizing HTML, CSS, JavaScript, MySQL, and PHP. Performed usability analysis and restructured the user interface using Figma.",
     tools: [
       { name: "HTML", icon: <SiHtml5 className="text-orange-500" /> },
-      { name: "Tailwind CSS", icon: <SiTailwindcss className="text-cyan-500" /> },
-      { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" /> },
+      { name: "CSS", icon: <SiCss3 className="text-blue-500" /> },
       { name: "PHP", icon: <SiPhp className="text-indigo-600" /> },
+      { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" /> },
       { name: "MySQL", icon: <SiMysql className="text-blue-500" /> },
     ],
-    images: ["/project-images/camp.png"],
-    github: "https://github.com/ChenukaRaneth76/Camp-Ceylon-",
-    live: "https://supermart-demo.com",
+    images: ["/project-images/dnk.png"],
+    github: "https://github.com/yourproject",
+    live: "https://github.com/ChenukaRaneth76/DNK-Super",
     category: "Full Stack"
   },
+
+  {
+    id: "RanHiru Delight Cake",
+    title: "Ranhiru Delight Cake",
+    subtitle: "RanhiruDelight Cakes Platform",
+    desc: "Developed a responsive front-end using HTML, CSS, and JavaScript for an online cake order platform. Integrated PHP and MySQL for dynamic content management and order tracking.",
+    tools: [
+      { name: "HTML", icon: <SiHtml5 className="text-orange-500" /> },
+      { name: "CSS", icon: <SiCss3 className="text-blue-500" /> },
+      { name: "PHP", icon: <SiPhp className="text-indigo-600" /> },
+      { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" /> },
+      { name: "MySQL", icon: <SiMysql className="text-blue-500" /> },
+    ],
+    images: ["/project-images/ranhiru.png"],
+    github: "https://github.com/ChenukaRaneth76/RanhiruCake-Web-Application",
+    live: "https://ranhiru-cakes.com",
+    category: "Full Stack"
+  },
+
 ];
 
 export default function Projects() {

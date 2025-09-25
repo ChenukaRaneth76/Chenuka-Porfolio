@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
 
 const HeroSection = () => {
-  const [selectedSide, setSelectedSide] = useState("original");
+  const [selectedSide, setSelectedSide] = useState("anime"); // UI/UX Designer shows first
   const [isAnimating, setIsAnimating] = useState(false);
 
   const handleModeChange = (side) => {
@@ -13,27 +13,27 @@ const HeroSection = () => {
   };
 
   const tools = {
-    original: [
+    anime: [ // UI/UX Designer tools
+      { name: "Figma", icon: "/icons/figma.png", color: "#F24E1E" },
+      { name: "Adobe XD", icon: "/icons/xd.png", color: "#FF61F6" },
+      { name: "Photoshop", icon: "/icons/photoshop.png", color: "#31A8FF" },
+      { name: "Illustrator", icon: "/icons/ilustrator.png", color: "#FF9A00" },
+      { name: "Canva", icon: "/icons/canva.png", color: "#00C4CC" }
+    ],
+    original: [ // Web Developer tools
       { name: "React", icon: "/icons/react.png", color: "#61DAFB" },
       { name: "Node.js", icon: "/icons/node.png", color: "#339933" },
       { name: "JavaScript", icon: "/icons/js.png", color: "#F7DF1E" },
       { name: "HTML", icon: "/icons/html.png", color: "#47A248" },
       { name: "Git", icon: "/icons/git.png", color: "#F05032" }
     ],
-    anime: [
-      { name: "Figma", icon: "/icons/figma.png", color: "#F24E1E" },
-      { name: "Adobe XD", icon: "/icons/xd.png", color: "#FF61F6" },
-      { name: "Photoshop", icon: "/icons/photoshop.png", color: "#31A8FF" },
-      { name: "Illustrator", icon: "/icons/ilustrator.png", color: "#FF9A00" },
-      { name: "Canva", icon: "/icons/canva.png", color: "#00C4CC" }
-    ]
   };
 
   return (
     <HeroContainer>
       <BackgroundGradient />
       <FloatingShapes />
-      
+
       <ContentWrapper>
         {/* Left Side - Text Content */}
         <TextSection>
@@ -41,7 +41,7 @@ const HeroSection = () => {
             Hi, I'm{" "}
             <GradientName>Chenuka</GradientName>
           </MainTitle>
-          
+
           <RoleTitle>
             {selectedSide === "original" ? (
               <span className="role-text">Web Developer</span>
@@ -49,7 +49,7 @@ const HeroSection = () => {
               <span className="role-text">UI/UX Designer</span>
             )}
           </RoleTitle>
-          
+
           <Description>
             {selectedSide === "original"
               ? "Passionate full-stack developer crafting robust web applications with modern technologies and clean code architecture."
@@ -59,20 +59,20 @@ const HeroSection = () => {
           {/* Mode Selection Buttons */}
           <ModeButtons>
             <ModeButton
-              onClick={() => handleModeChange("original")}
-              isActive={selectedSide === "original"}
+              onClick={() => handleModeChange("anime")}
+              isActive={selectedSide === "anime"}
               color="#8B5CF6"
             >
               <span className="icon">🎨</span>
               UI/UX Design
             </ModeButton>
             <ModeButton
-              onClick={() => handleModeChange("anime")}
-              isActive={selectedSide === "anime"}
+              onClick={() => handleModeChange("original")}
+              isActive={selectedSide === "original"}
               color="#3B82F6"
             >
               <span className="icon">⚡</span>
-               Web Development
+              Web Development
             </ModeButton>
           </ModeButtons>
         </TextSection>
@@ -80,18 +80,18 @@ const HeroSection = () => {
         {/* Right Side - Image with Floating Icons */}
         <ImageSection>
           <ImageContainer>
-            {/* Original Image */}
+            {/* UI/UX Image */}
             <ProfileImage
               src="/gemini2.png"
               alt="Designer Chenuka"
-              isVisible={selectedSide === "original"}
+              isVisible={selectedSide === "anime"}
             />
-            
-            {/* Anime Image */}
+
+            {/* Developer Image */}
             <ProfileImage
               src="/gemini.png"
               alt="Developer Chenuka"
-              isVisible={selectedSide === "anime"}
+              isVisible={selectedSide === "original"}
             />
 
             {/* Floating Tool Icons */}
@@ -152,7 +152,7 @@ const FloatingShapes = styled.div`
   right: 0;
   bottom: 0;
   pointer-events: none;
-  
+
   &::before,
   &::after {
     content: '';
@@ -163,13 +163,13 @@ const FloatingShapes = styled.div`
     border-radius: 50%;
     animation: ${floatingAnimation} 15s infinite ease-in-out;
   }
-  
+
   &::before {
     top: 15%;
     left: 10%;
     animation-delay: -5s;
   }
-  
+
   &::after {
     top: 65%;
     right: 15%;
@@ -185,7 +185,7 @@ const ContentWrapper = styled.div`
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   align-items: center;
-  
+
   @media (max-width: 1024px) {
     grid-template-columns: 1fr;
     gap: 3rem;
@@ -216,7 +216,7 @@ const RoleTitle = styled.h2`
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 700;
   margin-bottom: 1.5rem;
-  
+
   .role-text {
     background: linear-gradient(135deg, #60a5fa, #a78bfa);
     background-clip: text;
@@ -224,7 +224,7 @@ const RoleTitle = styled.h2`
     -webkit-text-fill-color: transparent;
     animation: fadeInUp 0.8s ease-out;
   }
-  
+
   @keyframes fadeInUp {
     from {
       opacity: 0;
@@ -243,7 +243,7 @@ const Description = styled.p`
   line-height: 1.7;
   margin-bottom: 2.5rem;
   max-width: 500px;
-  
+
   @media (max-width: 1024px) {
     max-width: 100%;
   }
@@ -253,7 +253,7 @@ const ModeButtons = styled.div`
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
-  
+
   @media (max-width: 1024px) {
     justify-content: center;
   }
@@ -273,13 +273,13 @@ const ModeButton = styled.button`
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   backdrop-filter: blur(10px);
-  
+
   &:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     background: ${props => props.isActive ? `${props.color}30` : 'rgba(255, 255, 255, 0.1)'};
   }
-  
+
   .icon {
     font-size: 1.2rem;
   }
@@ -296,12 +296,12 @@ const ImageContainer = styled.div`
   position: relative;
   width: 500px;
   height: 500px;
-  
+
   @media (max-width: 1024px) {
     width: 400px;
     height: 400px;
   }
-  
+
   @media (max-width: 640px) {
     width: 300px;
     height: 300px;
@@ -349,27 +349,26 @@ const ToolIcon = styled.div`
   animation-delay: ${props => props.delay}s;
   opacity: 0;
   transform: scale(0) rotate(180deg);
-  
+
   &:hover {
     transform: scale(1.1) rotate(0deg);
     box-shadow: 0 10px 25px ${props => props.color}40;
     background: rgba(255, 255, 255, 0.2);
   }
-  
+
   img {
     width: 32px;
     height: 32px;
     object-fit: contain;
   }
-  
+
   @keyframes floatIn {
     to {
       opacity: 1;
       transform: scale(1) rotate(0deg);
     }
   }
-  
-  /* Position each icon around the image */
+
   &:nth-child(1) { top: 10%; left: -30px; }
   &:nth-child(2) { top: 25%; right: -30px; }
   &:nth-child(3) { top: 50%; left: -30px; }
@@ -386,7 +385,7 @@ const ToolName = styled.span`
   white-space: nowrap;
   opacity: 0;
   transition: opacity 0.3s ease;
-  
+
   ${ToolIcon}:hover & {
     opacity: 1;
   }
@@ -403,11 +402,11 @@ const CentralGlow = styled.div`
   border-radius: 50%;
   pointer-events: none;
   animation: pulse 3s ease-in-out infinite;
-  
+
   @keyframes pulse {
     0%, 100% { opacity: 0.5; transform: translate(-50%, -50%) scale(1); }
     50% { opacity: 0.8; transform: translate(-50%, -50%) scale(1.1); }
   }
 `;
 
-export default HeroSection; 
+export default HeroSection;
