@@ -82,15 +82,15 @@ const HeroSection = () => {
           <ImageContainer>
             {/* Original Image */}
             <ProfileImage
-              src="/gemini.png"
-              alt="Developer Chenuka"
+              src="/gemini2.png"
+              alt="Designer Chenuka"
               isVisible={selectedSide === "original"}
             />
             
             {/* Anime Image */}
             <ProfileImage
-              src="/gemini2.png"
-              alt="Designer Chenuka"
+              src="/gemini.png"
+              alt="Developer Chenuka"
               isVisible={selectedSide === "anime"}
             />
 
