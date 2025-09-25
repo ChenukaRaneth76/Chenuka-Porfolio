@@ -77,8 +77,8 @@ const projects = [
   {
     id: "Camp Ceylon",
     title: "Camp Ceylon",
-    subtitle: "Interactive Puzzle Game",
-    desc: " Created an engaging web-based puzzle game that incorporates MathAPI for the dynamic generation of puzzles, Engineered with a modular architecture that guarantees low coupling and high cohesion between the frontend and backend elements.",
+    subtitle: "Automated Campsite Booking System for Sri Lanka",
+    desc: " Camp Ceylon is a web-based platform designed to revolutionize Sri Lanka’s eco-tourism sector by digitalizing campsite discovery, bookings, weather updates, and automated permit management.",
     tools: [
       { name: "HTML", icon: <SiHtml5 className="text-orange-500" /> },
       { name: "Tailwind CSS", icon: <SiTailwindcss className="text-cyan-500" /> },
@@ -87,7 +87,7 @@ const projects = [
       { name: "MySQL", icon: <SiMysql className="text-blue-500" /> },
     ],
     images: ["/project-images/camp.png"],
-    github: "https://github.com/yourproject",
+    github: "https://github.com/ChenukaRaneth76/Camp-Ceylon-",
     live: "https://supermart-demo.com",
     category: "Full Stack"
   },

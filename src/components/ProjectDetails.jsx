@@ -82,7 +82,7 @@ API Integration: Integrated the Banana API to deliver puzzles dynamically, ensur
     title: "Camp Ceylon",
     deliverables: " Automated Campsite Booking System for Sri Lanka (Camp Ceylon)",
     desc: `Camp Ceylon is a web-based platform designed to revolutionize Sri Lanka’s eco-tourism sector by digitalizing campsite discovery, bookings, weather updates, and automated permit management.`,
-    github: "https://github.com/yourproject",
+    github: "https://github.com/ChenukaRaneth76/Camp-Ceylon-",
     image: "/project-images/camp.png",
     image2: "/project-images/camp2.png", // second image
     features: [

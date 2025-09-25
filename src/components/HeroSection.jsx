@@ -61,18 +61,18 @@ const HeroSection = () => {
             <ModeButton
               onClick={() => handleModeChange("original")}
               isActive={selectedSide === "original"}
-              color="#3B82F6"
-            >
-              <span className="icon">⚡</span>
-              Web Development
-            </ModeButton>
-            <ModeButton
-              onClick={() => handleModeChange("anime")}
-              isActive={selectedSide === "anime"}
               color="#8B5CF6"
             >
               <span className="icon">🎨</span>
               UI/UX Design
+            </ModeButton>
+            <ModeButton
+              onClick={() => handleModeChange("anime")}
+              isActive={selectedSide === "anime"}
+              color="#3B82F6"
+            >
+              <span className="icon">⚡</span>
+               Web Development
             </ModeButton>
           </ModeButtons>
         </TextSection>
